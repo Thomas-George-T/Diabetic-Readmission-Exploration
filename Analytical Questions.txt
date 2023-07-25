@@ -1,0 +1,66 @@
+https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+Certainly! Below are the revised questions along with hints on how to solve them:
+
+(a) Questions solved using functions you define (such as lambda-map functions):
+1. Create a function that calculates the BMI (Body Mass Index) for each patient using their height and weight.
+   Hint: Use the formula BMI = weight (kg) / (height (m) * height (m)).
+
+2. Define a function that categorizes patients based on their glucose levels as low, normal, or high.
+   Hint: Use if-elif-else statements to define the conditions for each category and apply the function using lambda or map.
+
+3. Write a function to calculate the average age of male and female patients separately.
+   Hint: Use pandas' groupby function to group the data by gender and then calculate the mean of the 'age' column.
+
+4. Design a function to identify patients with extreme outlier values in the 'num_medications' column.
+   Hint: Use numpy's percentile function to calculate the 25th and 75th percentiles, then determine outliers based on those values.
+
+5. Create a function to convert the 'admission_date' column to a datetime format.
+   Hint: Use pandas' to_datetime function to convert the 'admission_date' column to a datetime format.
+
+(b) Questions utilizing Pandas and NumPy (revised):
+6. Find the median length of stay for diabetic patients.
+   Hint: Use pandas' median function on the 'length_of_stay' column.
+
+7. Calculate the percentage of male and female patients in the dataset.
+   Hint: Use pandas' value_counts to get the count of each gender and then calculate the percentage.
+
+8. Determine the most common race/ethnicity among diabetic patients.
+   Hint: Use pandas' value_counts on the 'race' column and select the entry with the highest count.
+
+9. Create a new column representing the patients' age groups (e.g., 20-30, 31-40, etc.).
+   Hint: Use pandas' cut function to create age bins and assign them to each patient.
+
+10. Find the average number of lab procedures for patients who underwent surgery and those who didn't.
+    Hint: Use pandas' groupby function to separate patients who had surgery from those who didn't and then calculate the mean.
+
+(c) Questions with visualizations using Matplotlib and Seaborn (revised):
+11. Visualize the distribution of age groups using a pie chart.
+    Hint: Use pandas' value_counts to get the count of patients in each age group and then use matplotlib to plot the pie chart.
+
+12. Create a bar plot to show the count of patients in each age group.
+    Hint: Use pandas' value_counts and matplotlib's bar chart to plot the count of patients in each age group.
+
+13. Visualize the correlation between age and readmission rates using a scatter plot.
+    Hint: Use matplotlib's scatter plot to plot 'age' against 'readmission_rate'.
+
+14. Plot a box plot to compare the length of stay for different races.
+    Hint: Use seaborn's boxplot to compare 'length_of_stay' for different values in the 'race' column.
+
+15. Create a histogram to visualize the distribution of the number of diagnoses per patient.
+    Hint: Use matplotlib or seaborn to plot a histogram of the 'num_diagnoses' column.
+
+(d) Questions revealing valuable insights from the dataset:
+16. Identify the top 5 hospitals with the highest readmission rates and explore potential reasons for their high rates.
+    Hint: Use pandas' groupby to calculate the average readmission rates for each hospital, then sort to get the top 5.
+
+17. Determine if there is a significant difference in the number of medications prescribed between different race/ethnicity groups.
+    Hint: Use pandas' groupby and scipy's statistical tests (e.g., t-test or ANOVA) to compare medication prescriptions.
+
+18. Analyze the relationship between the number of lab procedures and the length of stay for diabetic patients.
+    Hint: Use seaborn's scatter plot or regression plot to visualize the relationship between 'lab_procedures' and 'length_of_stay'.
+
+19. Investigate whether there is a correlation between the number of diagnoses and the number of medications prescribed.
+    Hint: Use pandas' corr function to calculate the correlation between 'num_diagnoses' and 'num_medications'.
+
+20. Use regression analysis to predict the length of stay based on age, number of lab procedures, and other relevant factors.
+    Hint: Use libraries like scikit-learn to perform regression analysis on relevant columns and predict 'length_of_stay'.

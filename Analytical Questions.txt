@@ -2,79 +2,21 @@
 1. Create a function that categorizes patients based on their glucose levels as low, normal, or high, using the 'max_glu_serum' column.
    Hint: Use if-elif-else statements in the function to define the conditions for each category and apply the function using lambda or map.
 
-2. Write a function to calculate the average age of male and female patients separately, using the 'gender' and 'age' columns.
-   Hint: Use pandas' groupby function to group the data by gender and then calculate the mean of the 'age' column.
-
-3. Design a function to identify patients with extreme outlier values in the 'num_medications' column.
-   Hint: Use numpy's percentile function to calculate the 25th and 75th percentiles, then determine outliers based on those values.
-
-4. Create a function to convert the 'admission_date' column to a datetime format.
-   Hint: The 'admission_date' column is not available in the provided columns. So, you may skip this question.
-
-5. Create a function that calculates the average number of lab procedures per patient using the 'num_lab_procedures' column.
-
-(b) Questions utilizing Pandas and NumPy (revised):
-6. Find the median length of stay for diabetic patients using the 'time_in_hospital' column.
-   Hint: Use pandas' median function on the 'time_in_hospital' column.
-
-7. Calculate the percentage of male and female patients in the dataset using the 'gender' column.
-   Hint: Use pandas' value_counts to get the count of each gender and then calculate the percentage.
-
-8. Determine the most common race/ethnicity among diabetic patients using the 'race' column.
-   Hint: Use pandas' value_counts on the 'race' column and select the entry with the highest count.
-
-9. Create a new column representing the patients' age groups (e.g., 20-30, 31-40, etc.) using the 'age' column.
-   Hint: Use pandas' cut function to create age bins and assign them to each patient.
-
-10. Find the average number of lab procedures for patients who underwent surgery and those who didn't, using the 'num_lab_procedures' and 'num_procedures' columns.
-    Hint: Use pandas' groupby function to separate patients who had surgery (num_procedures > 0) from those who didn't (num_procedures = 0), then calculate the mean of 'num_lab_procedures' for each group.
-
-(c) Questions with visualizations using Matplotlib and Seaborn (revised):
-11. Visualize the distribution of age groups using a pie chart, based on the 'age' column.
-    Hint: Use pandas' value_counts to get the count of patients in each age group and then use matplotlib to plot the pie chart.
-
-12. Create a bar plot to show the count of patients in each age group, using the 'age' column.
-    Hint: Use pandas' value_counts and matplotlib's bar chart to plot the count of patients in each age group.
-
-13. Visualize the correlation between age and readmission rates using a scatter plot, using the 'age' and 'readmitted' columns.
-    Hint: Use matplotlib's scatter plot to plot 'age' against 'readmitted'.
-
-14. Plot a box plot to compare the length of stay for different races, using the 'race' and 'time_in_hospital' columns.
-    Hint: Use seaborn's boxplot to compare 'time_in_hospital' for different values in the 'race' column.
-
-15. Create a histogram to visualize the distribution of the number of diagnoses per patient, using the 'number_diagnoses' column.
-    Hint: Use matplotlib or seaborn to plot a histogram of the 'number_diagnoses' column.
-
 (d) Questions revealing valuable insights from the dataset:
-16. Identify the top 5 hospitals with the highest readmission rates and explore potential reasons for their high rates, using the 'readmitted' column.
-    Hint: Use pandas' groupby to calculate the average readmission rates for each hospital, then sort to get the top 5.
 
 17. Determine if there is a significant difference in the number of medications prescribed between different race/ethnicity groups, using the medication columns (e.g., 'metformin', 'repaglinide', etc.).
     Hint: Use pandas' groupby and scipy's statistical tests (e.g., t-test or ANOVA) to compare medication prescriptions among different race/ethnicity groups.
 
-18. Analyze the relationship between the number of lab procedures and the length of stay for diabetic patients, using the 'num_lab_procedures' and 'time_in_hospital' columns.
-    Hint: Use seaborn's scatter plot or regression plot to visualize the relationship between 'num_lab_procedures' and 'time_in_hospital'.
-
 19. Investigate whether there is a correlation between the number of diagnoses and the number of medications prescribed, using the 'number_diagnoses' and 'num_medications' columns.
     Hint: Use pandas' corr function to calculate the correlation between 'number_diagnoses' and 'num_medications'.
-
-20. Use regression analysis to predict the length of stay based on age, number of lab procedures, and other relevant factors, using appropriate columns.
-    Hint: Use libraries like scikit-learn to perform regression analysis on relevant columns and predict 'time_in_hospital'.
 
 -------
 
 5 Additional Questions long with their categories (a), (b), (c), or (d):
 
 (a) Questions solved using functions you define (such as lambda-map functions):
-1. Create a function that calculates the average number of outpatient visits for patients with a specific diagnosis ('diag_1', 'diag_2', or 'diag_3').
-
-2. Define a function that categorizes patients based on the number of medications they are taking into 'Low', 'Medium', and 'High' groups.
 
 3. Write a function that calculates the readmission rate for patients who had a specific procedure (e.g., 'glipizide', 'insulin', etc.).
-
-4. Design a function to calculate the percentage of patients who were readmitted within 30 days of their previous hospitalization.
-
-5. Create a function to identify patients who had a specific medication combination, such as 'metformin' and 'glipizide'.
 
 (b) Questions utilizing Pandas and NumPy:
 6. Find the average time in the hospital for patients with different levels of 'number_diagnoses' (e.g., 1-5, 6-10, etc.).
@@ -92,8 +34,6 @@
 
 12. Create a box plot to compare the time spent in the hospital for different admission types ('admission_type_id').
 
-13. Plot a line chart to show the trend of readmission rates over the years.
-
 14. Visualize the percentage of patients from each race/ethnicity group using a pie chart.
 
 15. Create a scatter plot to analyze the relationship between the number of lab procedures and the number of medications.
@@ -101,10 +41,4 @@
 (d) Questions revealing valuable insights from the dataset:
 16. Explore the readmission rates for patients with different A1C test results ('A1Cresult') to identify any correlations.
 
-17. Investigate the relationship between the length of stay and the number of lab procedures for patients with different admission sources ('admission_source_id').
-
 18. Analyze the average number of procedures for patients who were readmitted within 30 days compared to those who were not.
-
-19. Determine the most common medical specialty for patients who had a length of stay greater than the median length of stay.
-
-20. Use statistical tests to identify if the number of diagnoses significantly impacts the time spent in the hospital.

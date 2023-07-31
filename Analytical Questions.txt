@@ -2,14 +2,6 @@
 1. Create a function that categorizes patients based on their glucose levels as low, normal, or high, using the 'max_glu_serum' column.
    Hint: Use if-elif-else statements in the function to define the conditions for each category and apply the function using lambda or map.
 
-(d) Questions revealing valuable insights from the dataset:
-
-17. Determine if there is a significant difference in the number of medications prescribed between different race/ethnicity groups, using the medication columns (e.g., 'metformin', 'repaglinide', etc.).
-    Hint: Use pandas' groupby and scipy's statistical tests (e.g., t-test or ANOVA) to compare medication prescriptions among different race/ethnicity groups.
-
-19. Investigate whether there is a correlation between the number of diagnoses and the number of medications prescribed, using the 'number_diagnoses' and 'num_medications' columns.
-    Hint: Use pandas' corr function to calculate the correlation between 'number_diagnoses' and 'num_medications'.
-
 -------
 
 5 Additional Questions long with their categories (a), (b), (c), or (d):
@@ -37,8 +29,3 @@
 14. Visualize the percentage of patients from each race/ethnicity group using a pie chart.
 
 15. Create a scatter plot to analyze the relationship between the number of lab procedures and the number of medications.
-
-(d) Questions revealing valuable insights from the dataset:
-16. Explore the readmission rates for patients with different A1C test results ('A1Cresult') to identify any correlations.
-
-18. Analyze the average number of procedures for patients who were readmitted within 30 days compared to those who were not.
